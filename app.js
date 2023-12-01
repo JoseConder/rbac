@@ -11,7 +11,7 @@ const app = express();
 const {expressjwt: auth} = require('express-jwt');
 
 app.use(auth({
-  secret: key,algorithms:['HS256']}).unless({path:['/login']}));
+  secret: key,algorithms:['HS256']}).unless({path:['/login', '/home']}));
 
 // Importación de las rutas
 const loginRouter = require('./routes/login');
