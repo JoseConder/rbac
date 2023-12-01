@@ -18,7 +18,7 @@ const loginRouter = require('./routes/login');
 const usersRouter = require('./routes/users');
 
 // Configuración de la base de datos
-const url = 'mongodb://admin:Td6KFuqQ6OuWqaINEVyDTrLA@MongoS3601A.back4app.com:27017/319bc4e9f5a74964a8dd406daf671b51';
+const url = 'mongodb+srv://a299506:mondongo@cluster0.orzxcsb.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(url);
 const db = mongoose.connection;
 
