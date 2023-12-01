@@ -22,12 +22,18 @@ const url = 'mongodb+srv://a299506:mondongo@cluster0.orzxcsb.mongodb.net/?retryW
 mongoose.connect(url);
 const db = mongoose.connection;
 
-db.on('error',()=>{
-    console.log("No se ha podido conectar a la base de datos");
+db.on('connected', () => {
+  console.log('Conexión a MongoDB establecida');
 });
-db.on('open',()=>{
-    console.log("Se ha conectado correctamente");
+
+db.on('error', (err) => {
+  console.error('Error de conexión a MongoDB:', err);
 });
+
+db.on('disconnected', () => {
+  console.log('Conexión a MongoDB cerrada');
+});
+
 app.set('view engine', 'pug');
 
 app.use(express.json());
