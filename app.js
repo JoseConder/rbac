@@ -10,8 +10,8 @@ const app = express();
 // Configuración del middleware de autenticación
 const {expressjwt: auth} = require('express-jwt');
 
-app.use(auth({
-  secret: key,algorithms:['HS256']}).unless({path:['/login', '/home']}));
+/*app.use(auth({
+  secret: key,algorithms:['HS256']}).unless({path:['/login', '/home']}));*/
 
 // Importación de las rutas
 const loginRouter = require('./routes/login');
