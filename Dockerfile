@@ -2,5 +2,5 @@ FROM node
 WORKDIR /app
 COPY . .
 RUN npm install
-EXPOSE 80
-CMD PORT=80 node app.js
+EXPOSE 27017
+CMD PORT=27017 node app.js
