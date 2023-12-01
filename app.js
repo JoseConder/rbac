@@ -18,7 +18,7 @@ const loginRouter = require('./routes/login');
 const usersRouter = require('./routes/users');
 
 // Configuración de la base de datos
-const url = 'mongodb://127.0.0.1:27017/RBAC';
+const url = 'mongodb://admin:Td6KFuqQ6OuWqaINEVyDTrLA@MongoS3601A.back4app.com:27017/319bc4e9f5a74964a8dd406daf671b51';
 mongoose.connect(url);
 const db = mongoose.connection;
 
